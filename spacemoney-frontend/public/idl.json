@@ -1,0 +1,128 @@
+{
+  "version": "0.1.0",
+  "name": "spacemoney",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [],
+      "args": [{ "name": "usdtMint", "type": "publicKey" }]
+    },
+    {
+      "name": "depositSol",
+      "accounts": [],
+      "args": [
+        { "name": "amount", "type": "u64" },
+        { "name": "tier", "type": "u8" }
+      ]
+    },
+    {
+      "name": "depositUsdt",
+      "accounts": [],
+      "args": [
+        { "name": "amount", "type": "u64" },
+        { "name": "tier", "type": "u8" }
+      ]
+    },
+    {
+      "name": "withdrawSol",
+      "accounts": [],
+      "args": [{ "name": "stakeIndex", "type": "u64" }]
+    },
+    {
+      "name": "withdrawUsdt",
+      "accounts": [],
+      "args": [{ "name": "stakeIndex", "type": "u64" }]
+    },
+    {
+      "name": "forceWithdraw",
+      "accounts": [],
+      "args": [{ "name": "stakeIndex", "type": "u64" }]
+    },
+    {
+      "name": "claimRewards",
+      "accounts": [],
+      "args": [{ "name": "stakeIndex", "type": "u64" }]
+    },
+    {
+      "name": "adminTransfer",
+      "accounts": [],
+      "args": [
+        { "name": "amount", "type": "u64" },
+        { "name": "tokenType", "type": "u8" }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "PlatformState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "admin", "type": "publicKey" },
+          { "name": "treasurySol", "type": "u64" },
+          { "name": "treasuryUsdt", "type": "u64" },
+          { "name": "totalStakedSol", "type": "u64" },
+          { "name": "totalStakedUsdt", "type": "u64" },
+          { "name": "usdtMint", "type": "publicKey" },
+          { "name": "isPaused", "type": "bool" },
+          { "name": "createdAt", "type": "i64" },
+          { "name": "bump", "type": "u8" }
+        ]
+      }
+    },
+    {
+      "name": "UserAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "user", "type": "publicKey" },
+          { "name": "stakes", "type": { "vec": "UserStake" } },
+          { "name": "totalClaimedSol", "type": "u64" },
+          { "name": "totalClaimedUsdt", "type": "u64" },
+          { "name": "lastClaimTime", "type": "i64" },
+          { "name": "bump", "type": "u8" }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "UserStake",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "amount", "type": "u64" },
+          { "name": "tier", "type": { "defined": "Tier" } },
+          { "name": "tokenType", "type": { "defined": "TokenType" } },
+          { "name": "depositedAt", "type": "i64" },
+          { "name": "lockUntil", "type": "i64" },
+          { "name": "claimedRewards", "type": "u64" },
+          { "name": "isActive", "type": "bool" }
+        ]
+      }
+    },
+    {
+      "name": "Tier",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          { "name": "Boot" },
+          { "name": "Symbiotic" },
+          { "name": "Space" }
+        ]
+      }
+    },
+    {
+      "name": "TokenType",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          { "name": "SOL" },
+          { "name": "USDT" }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "metadata": { "address": "SpaceMoneyProgram11111111111111111111111" }
+}
