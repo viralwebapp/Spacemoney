@@ -223,6 +223,22 @@ npm run dev
 npm run build
 ```
 
+### ☁️ Vercel Deployment (Automated)
+
+The project is pre-configured for seamless deployment to Vercel (free tier).
+
+1. **Quick Deploy**: Run the included deployment script:
+   ```bash
+   ./deploy.sh
+   ```
+
+2. **Manual Setup**:
+   - Connect your GitHub repo to Vercel.
+   - Use the root of the repository as the project root.
+   - Vercel will automatically detect the configuration in `vercel.json`.
+
+For detailed instructions, see [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md).
+
 ## 📝 Configuration
 
 ### Environment Variables
