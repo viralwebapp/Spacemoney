@@ -2,8 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
 import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  appType: 'spa',
   plugins: [
     react(),
     nodePolyfills({
@@ -20,7 +24,8 @@ export default defineConfig({
     },
   },
   define: {
-    'process.env': process.env,
+    'process.env': {},
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
     global: 'globalThis',
   },
   server: {

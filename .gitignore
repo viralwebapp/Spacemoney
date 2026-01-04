@@ -65,6 +65,7 @@ Thumbs.db
 *.json
 !package.json
 !tsconfig.json
+!vercel.json
 !**/idl.json
 
 # Testing

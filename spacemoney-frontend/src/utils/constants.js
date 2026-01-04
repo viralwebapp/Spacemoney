@@ -1,10 +1,12 @@
 // Contract configuration
-export const PROGRAM_ID = "Fg6Pa4H2Qv7Vu86vAisdStXVNoTMTgks9R59yQhF6P2";
-export const USDT_MINT = "EPjFWaJsq4DcaRKmqsPb94k8ao64C1MwMUeFqwxDRvPj";
+const env = import.meta.env;
+
+export const PROGRAM_ID = env.VITE_PROGRAM_ID || "Fg6Pa4H2Qv7Vu86vAisdStXVNoTMTgks9R59yQhF6P2";
+export const USDT_MINT = env.VITE_USDT_MINT || "EPjFWaJsq4DcaRKmqsPb94k8ao64C1MwMUeFqwxDRvPj";
 
 // Network
-export const NETWORK = "devnet";
-export const RPC_ENDPOINT = "https://api.devnet.solana.com";
+export const NETWORK = env.VITE_NETWORK || "devnet";
+export const RPC_ENDPOINT = env.VITE_RPC_ENDPOINT || "https://api.devnet.solana.com";
 
 // Tier configurations
 export const TIERS = {
