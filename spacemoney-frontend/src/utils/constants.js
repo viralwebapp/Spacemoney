@@ -1,6 +1,8 @@
 // Contract configuration
 export const PROGRAM_ID = import.meta.env.VITE_PROGRAM_ID || "SpaceMoneyProgram11111111111111111111111";
 export const USDT_MINT = import.meta.env.VITE_USDT_MINT || "EPjFWaJsq4DcaRKmqsPb94k8ao64C1MwMUeFqwxDRvPj";
+export const PROGRAM_ID = "Fg6Pa4H2Qv7Vu86vAisdStXVNoTMTgks9R59yQhF6P2";
+export const USDT_MINT = "EPjFWaJsq4DcaRKmqsPb94k8ao64C1MwMUeFqwxDRvPj";
 
 // Network
 export const NETWORK = import.meta.env.VITE_NETWORK || "devnet";

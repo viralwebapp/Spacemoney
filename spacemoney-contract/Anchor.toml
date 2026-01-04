@@ -6,10 +6,10 @@ resolution = true
 skip-lint = false
 
 [programs.devnet]
-spacemoney = "SpaceMoneyProgram11111111111111111111111"
+spacemoney = "Fg6Pa4H2Qv7Vu86vAisdStXVNoTMTgks9R59yQhF6P2"
 
 [programs.localnet]
-spacemoney = "SpaceMoneyProgram11111111111111111111111"
+spacemoney = "Fg6Pa4H2Qv7Vu86vAisdStXVNoTMTgks9R59yQhF6P2"
 
 [registry]
 url = "https://api.apr.dev"
