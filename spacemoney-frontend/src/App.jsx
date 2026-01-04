@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { WalletContextProvider } from './contexts/WalletContext';
 import { ToastProvider } from './contexts/ToastContext';
 import Layout from './components/Layout';
@@ -56,6 +57,7 @@ function App() {
               </Routes>
             </React.Suspense>
           </BrowserRouter>
+          <SpeedInsights />
         </ToastProvider>
       </WalletContextProvider>
     </QueryClientProvider>
