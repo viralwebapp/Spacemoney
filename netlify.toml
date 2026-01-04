@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "spacemoney-frontend/dist"
+  base = "spacemoney-frontend"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
