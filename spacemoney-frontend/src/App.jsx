@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Analytics } from '@vercel/analytics/react';
 import { WalletContextProvider } from './contexts/WalletContext';
 import { ToastProvider } from './contexts/ToastContext';
 import Layout from './components/Layout';
@@ -55,6 +56,7 @@ function App() {
                 </Route>
               </Routes>
             </React.Suspense>
+            <Analytics />
           </BrowserRouter>
         </ToastProvider>
       </WalletContextProvider>
