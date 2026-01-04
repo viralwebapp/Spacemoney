@@ -1,0 +1,80 @@
+# Solana / Anchor
+.anchor
+target/
+test-ledger/
+.DS_Store
+*.so
+*.swp
+
+# Rust
+**/target/
+**/*.rs.bk
+Cargo.lock
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+build/
+*.local
+
+# Vite
+.vite/
+.vite-cache/
+
+# Logs
+logs/
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.history/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDL (generated, should be copied manually)
+# Uncomment if you want to ignore generated IDL
+# **/idl.json
+
+# Wallet files (never commit!)
+*.json
+!package.json
+!tsconfig.json
+!**/idl.json
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Solana specific
+.config/
