@@ -9,7 +9,7 @@ pub mod utils;
 
 use instructions::*;
 
-declare_id!("SpaceMoneyProgram11111111111111111111111");
+declare_id!("Fg6Pa4H2Qv7Vu86vAisdStXVNoTMTgks9R59yQhF6P2");
 
 #[program]
 pub mod spacemoney {
