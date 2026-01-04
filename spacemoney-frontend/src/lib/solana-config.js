@@ -95,5 +95,5 @@ export async function accountExists(publicKey) {
 export async function getSOLBalance(publicKey) {
   const connection = createConnection();
   const balance = await connection.getBalance(new PublicKey(publicKey));
-  return balance / 1e9; // Convert lamports to SOL
+  return balance; // Return lamports
 }

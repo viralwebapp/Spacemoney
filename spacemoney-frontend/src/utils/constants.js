@@ -1,10 +1,10 @@
 // Contract configuration
-export const PROGRAM_ID = "SpaceMoneyProgram11111111111111111111111";
-export const USDT_MINT = "EPjFWaJsq4DcaRKmqsPb94k8ao64C1MwMUeFqwxDRvPj";
+export const PROGRAM_ID = import.meta.env.VITE_PROGRAM_ID || "SpaceMoneyProgram11111111111111111111111";
+export const USDT_MINT = import.meta.env.VITE_USDT_MINT || "EPjFWaJsq4DcaRKmqsPb94k8ao64C1MwMUeFqwxDRvPj";
 
 // Network
-export const NETWORK = "devnet";
-export const RPC_ENDPOINT = "https://api.devnet.solana.com";
+export const NETWORK = import.meta.env.VITE_NETWORK || "devnet";
+export const RPC_ENDPOINT = import.meta.env.VITE_RPC_ENDPOINT || "https://api.devnet.solana.com";
 
 // Tier configurations
 export const TIERS = {
